@@ -85,7 +85,9 @@ A professionally organized USB drive ensures maximum speed and ease of use:
 │    └── 📄 qwen_3_8b.gguf
 ├── 📁 system_prompts/      # Persona templates (.txt)
 │    ├── 📄 Code_Architect.txt
-│    └── 📄 Creative_Writer.txt
+│    └── 📄 ...
+├── 📁 scripts/
+│    └── 📄 update_llamafile.ps1 # Auto-update tool
 └── 📁 assets/              # documentation visuals
 ```
 
@@ -102,7 +104,35 @@ Llamafile automatically attempts to use your GPU. If you have an NVIDIA GPU, inf
 ### Advanced Flags
 You can edit the `launch_ai` scripts to include:
 - `--threads 8`: Optimize for your specific CPU core count.
-- `-c 2048`: increase the "memory" (context size) of the AI.
+- `-c N` | Context window size | Default is 512; increase for longer conversations (consumes more RAM) |
+
+---
+
+## 🔒 Privacy Hardening
+
+To ensure no trace is left on the host computer:
+
+### Private Browsing
+The `launch_ai.bat` script now supports launching in **Incognito/Private** mode for Chrome, Edge, and Firefox. This prevents the browser from saving:
+- Chat history in cache.
+- Session cookies.
+- Form data.
+
+### Anti-Forensics
+Always use the **"Clear All"** option in the Llamafile UI before unplugging your drive to wipe the current session from the system's memory.
+
+---
+
+## 🛠️ Maintenance
+
+### Auto-Updates
+Keep your AI engine up-to-date without manually visiting GitHub:
+1. Open PowerShell.
+2. Run the update script:
+   ```powershell
+   .\scripts\update_llamafile.ps1
+   ```
+3. The script will automatically fetch the latest `llamafile.exe` from the official repository.
 
 ---
 

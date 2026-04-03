@@ -61,10 +61,32 @@ if "!SELECTED_MODEL!"=="" (
 )
 
 echo.
-echo  [92m[+] Launching !SELECTED_MODEL!... [0m
-echo  [90m(The web UI will open in your browser automatically) [0m
+echo  [94m[+] Choose a Browser Mode: [0m
+echo  [1] Standard (Default)
+echo  [2] Chrome (Incognito)
+echo  [3] Edge (InPrivate)
+echo  [4] Firefox (Private)
 echo.
+set /p mode="👉 Select mode (1-4): "
 
-"%BIN%" -m "%MODEL_PATH%\!SELECTED_MODEL!"
+echo.
+echo  [92m[+] Launching !SELECTED_MODEL!... [0m
+
+:: Start Llamafile in the background
+start /b "" "%BIN%" -m "%MODEL_PATH%\!SELECTED_MODEL!"
+
+:: Wait 3 seconds for the server to start
+timeout /t 3 /nobreak >nul
+
+:: Launch browser based on selection
+if "%mode%"=="2" (
+    start chrome --incognito "http://localhost:8080"
+) else if "%mode%"=="3" (
+    start msedge --inprivate "http://localhost:8080"
+) else if "%mode%"=="4" (
+    start firefox --private-window "http://localhost:8080"
+) else (
+    start http://localhost:8080
+)
 
 pause
