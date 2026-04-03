@@ -1,0 +1,8 @@
+# Binaries
+*.exe
+*.gguf
+*.llamafile
+
+# OS generated files
+.DS_Store
+Thumbs.db
