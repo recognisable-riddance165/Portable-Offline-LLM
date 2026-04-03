@@ -3,6 +3,10 @@
 *.gguf
 *.llamafile
 
+# Model Folder Content (GGUF logs or temp files)
+models/*
+!models/.gitkeep
+
 # OS generated files
 .DS_Store
 Thumbs.db

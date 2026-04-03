@@ -70,37 +70,55 @@ This project shows you how to set up a portable Large Language Model (LLM) envir
 
 4. Click your chosen model → go to the **Files and versions** tab.
 5. Download a **Q4 or Q4_K_M quantized** `.gguf` file.
-6. Move the `.gguf` file to the **root of your USB drive**.
+6. Create a folder named **`models`** on your USB drive and move the `.gguf` file into it.
 
 > 💡 **Suggestion:** [Qwen 3 8B Q4_K_M](https://huggingface.co/models?search=qwen3+8b+gguf) is a great starting point.
 
 ---
 
-### Step 4 — Create a Startup Script
+### Step 4 — Use the Unified Launcher
 
-1. Open **Notepad**.
-2. Type the following command, replacing the filename with your actual model name:
+This project includes a **`launch_ai.bat`** script that automatically detects any models you've placed in the `models/` folder.
 
-```bat
-llamafile.exe -m your_model_name.gguf
-```
-
-3. Go to **File → Save As**.
-4. Set **Save as type** to **All Files**.
-5. Name the file something like `run_qwen_3_8b.bat` and save it to the **root of your USB drive**.
+1. Ensure **`llamafile.exe`** is in the root of your USB drive.
+2. Ensure your `.gguf` models are inside the **`models/`** folder.
+3. Double-click **`launch_ai.bat`**.
 
 ---
 
 ### Step 5 — Run Your AI
 
-1. Double-click your `.bat` file.
-2. A command prompt window will open and the model will load into system memory (this may take 30–90 seconds).
-3. Once loaded, the **Llamafile web UI** will automatically open in your browser.
-4. Optionally configure:
+1. When you run `launch_ai.bat`, a menu will appear listing all available models.
+2. **Type the number** of the model you want to load and press **Enter**.
+3. A command prompt window will open and the model will load (this may take 30–90 seconds).
+4. Once loaded, the **Llamafile web UI** will automatically open in your browser.
+5. Optionally configure:
    - **System Prompt** — Define the AI's persona
    - **Username** — Your display name
    - **Bot Name** — The AI's display name
-5. Type your first message and start chatting! 🎉
+6. Type your first message and start chatting! 🎉
+
+---
+
+## 🐧 Linux & macOS Setup
+
+Llamafile is natively cross-platform. To run on Unix-based systems:
+
+1. Open a **Terminal**.
+2. Navigate to your USB drive:
+   ```bash
+   cd /media/your_user/your_usb_drive
+   ```
+3. Make the launcher and binary executable:
+   ```bash
+   chmod +x llamafile.exe launch_ai.sh
+   ```
+4. Run the launcher:
+   ```bash
+   ./launch_ai.sh
+   ```
+
+> 💡 **Note:** Even on Linux/macOS, the Llamafile binary typically keeps the `.exe` extension from the download.
 
 ---
 
@@ -111,13 +129,57 @@ Your finished USB drive should look like this:
 ```
 📁 USB Drive (exFAT)
 ├── 📄 llamafile.exe
-├── 📄 your_model_name.gguf
-├── 📄 run_model.bat
-└── 📄 (optional) another_model.gguf
-     └── run_another_model.bat
+├── 📄 launch_ai.bat
+├── 📄 launch_ai.sh
+├── 📁 models/
+│    └── 📄 your_model_name.gguf
+├── 📁 system_prompts/
+│    ├── 📄 Code_Architect.txt
+│    └── 📄 ...
+└── 📁 scripts/
+     └── (future scripts)
 ```
 
-> 💡 You can store multiple models and create a separate `.bat` file for each one!
+> 💡 Simply drop more `.gguf` files into the `models/` folder to add them to your launcher!
+
+---
+
+## ⚡ Performance Tuning
+
+To get the most out of your hardware, you can modify the launcher scripts or manually pass flags:
+
+| Flag | Description | Recommendation |
+|---|---|---|
+| `--threads N` | Number of CPU threads to use | Set to `Physical Cores minus 1` for best stability |
+| `-ngl N` | Number of layers to offload to GPU | If you have a dedicated GPU (NVIDIA/AMD), increase this for speed |
+| `-c N` | Context window size | Default is 512; increase for longer conversations (consumes more RAM) |
+
+---
+
+## 🏗️ Hardware Recommendations
+
+For the best experience, use hardware that matches these specifications:
+
+### 🚀 Recommended USB Drives
+- **SanDisk Extreme Pro** (USB 3.2 Gen 1) — High sustained read/write speeds.
+- **Samsung T7 Shield** (Portable SSD) — Drastically faster loading than a standard flash drive.
+- **Kingston DataTraveler Max** — Excellent Performance-to-price ratio.
+
+### 💻 Host PC Specs
+- **USB Port**: Always use a **USB 3.0/3.1** blue or red port. Avoid black ports (USB 2.0) as they are 10x slower.
+- **RAM**: 16 GB for 7B-14B models; 32 GB+ for larger models.
+- **GPU**: Llamafile automatically uses TinyBLAS for CPU, but will leverage CUDA/Vulkan if available for much faster inference.
+
+---
+
+## 🎭 System Prompts
+
+This project includes a `system_prompts/` directory with templates to change the AI's behavior. To use them:
+
+1. Open a file in `system_prompts/` (e.g., `Code_Architect.txt`).
+2. Copy the text.
+3. Paste it into the **System Prompt** field in the Llamafile Web UI.
+4. Click **Apply Changes**.
 
 ---
 
